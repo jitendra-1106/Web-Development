@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <table>
+
+        <!-- The caption tag adds a title or description to the table. -->
+        <caption>Employee Details</caption>
+
+        <!-- The thead tag groups the header rows of the table. -->
+        <thead>
+            <tr>
+                <!-- The th tag defines a header cell. -->
+                <th>Name</th>
+                <th>Designation</th>
+                <th>Fav Language</th>
+            </tr>
+        </thead>
+
+        <!-- The tbody tag groups the main data rows of the table. -->
+        <tbody>
+            <tr>
+                <!-- The td tag defines a normal data cell. -->
+                <td>Jitendra</td>
+                <td>Programmer</td>
+                <td>c++</td>
+            </tr>
+
+            <tr>
+                <!-- colspan="2" makes this cell occupy two columns. -->
+                <td colspan="2">jk</td>
+                <!-- rowspan="2" makes this cell occupy two rows. -->
+                <td rowspan="2">Java</td>
+            </tr>
+            <tr>
+                <td colspan="2">mk</td>
+            </tr>
+        </tbody>
+
+        <!-- The tfoot tag groups the footer rows of the table. -->
+        <tfoot>
+            <tr>
+                <td colspan="2">Sam</td>
+                <td rowspan="1">footer</td>
+                <!-- rowspan="1" because there is no second row in the footer. -->
+            </tr>
+        </tfoot>
+
+    </table>
+
+</body>
+
+</html>
+
+<!-- The thead tag is used to group the header rows of a table. -->
+<!-- The tbody tag is used to group the main data rows of a table. -->
+<!-- The tfoot tag is used to group the footer rows of a table. -->
+
+<!-- The tr tag defines a table row. (tr = Table Row) -->
+<!-- The th tag defines a header cell in a table. (th = Table Header) -->
+<!-- The td tag defines a normal data cell in a table. (td = Table Data) -->
+
+<!-- The thead, tbody and tfoot tags are optional but recommended for better table structure. -->
+<!-- The tr tag is used to create rows, while th and td are used to create cells. -->
+
+<!--
+<body>
+    <table>
+        <caption>Employee Details</caption>
+        <tr>
+            <th>Name</th>
+            <th>Designation</th>
+            <th>Fav Language</th>
+        </tr>
+
+        <tr>
+            <td>Jitendra</td>
+            <td>Programmer</td>
+            <td>c++</td>
+        </tr>
+
+        <tr>
+            <td colspan="2">jk</td>
+            <td rowspan="2">Java</td>
+        </tr>
+        
+        <tr>
+            <td colspan="2">mk</td>
+        </tr>
+
+        <tr>
+            <td colspan="2">Sam</td>
+            <td rowspan="2">footer</td>
+        </tr>
+    </table>
+
+</body>
+-->
