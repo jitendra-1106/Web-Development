@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+</head>
+
+<body>
+
+    <!-- The img tag is used to display images on a webpage. -->
+    <!-- The src attribute specifies the path of the image file. -->
+    <!-- The alt attribute provides alternative text if the image cannot be displayed. -->
+    <!-- Screen readers also use alt text to describe images to visually impaired users. -->
+    <!-- The alt attribute should be included in every img element. -->
+    <!-- For meaningful images, write a short and descriptive alt text. -->
+    <!-- For decorative images, use alt="" instead of removing the alt attribute. -->
+
+    <img src="image.png" alt="image">
+
+    <!-- Without alt, the browser has no alternative text to display if the image fails to load. -->
+    <img src="image.png">
+
+    <img src="image1.png" alt="image1">
+
+    <!-- The width attribute specifies the width of the image in pixels. -->
+    <img width="230" src="image2.png" alt="image2">
+
+    <!-- The height attribute specifies the height of the image in pixels. -->
+    <img height="230" src="image2.png" alt="image2">
+
+    <!-- Both width and height attributes specify the dimensions of the image in pixels. -->
+    <img height="230" width="360" src="image.png" alt="image">
+</body>
+
+</html>
+
+<!-- The width and height attributes are optional, but specifying image dimensions is recommended. -->
+<!-- If only width or height is specified, the browser automatically calculates the other dimension to maintain the original aspect ratio. -->
+<!-- Specifying image dimensions helps the browser reserve space for the image before it loads, reducing layout shifts. -->
+<!-- This improves the user experience and can support SEO by improving page stability and Core Web Vitals. -->
+
+<!-- The style attribute can be used to apply CSS properties like width and height to an image. -->
+<!--  <img src="image.png" alt="A sample image" style="width: 230px; height: auto;">  --> 
