@@ -1,0 +1,31 @@
+p{
+    background-color: aqua;
+}
+
+a{
+    background-color: rgb(238, 158, 54);
+}
+
+div{
+    background-color: rgb(159, 154, 233);
+}
+
+span{
+    background-color: bisque;
+}
+
+h4{
+    background-color: blueviolet;
+}
+
+/* Changes a block element into an inline element. */
+h4 {
+    display: inline;
+}
+
+/* Changes an inline element into a block element. */
+span {
+    display: block;
+}
+
+/* inline-block keeps the element on the same line like inline, but allows width and height like block. */
