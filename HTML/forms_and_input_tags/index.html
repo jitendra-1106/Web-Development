@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <h1>Form to apply for Sigma Web Development course - TA </h1>
+
+    <!-- The form tag is used to collect and submit user data. -->
+    <!-- The method attribute specifies how form data is sent to the server. -->
+    <!-- The action attribute specifies the URL where form data is submitted. -->
+    <!-- GET sends form data through the URL. -->
+    <!-- POST sends form data in the HTTP request body. -->
+    <form action="/submit" method="POST">
+
+        <div>
+            <!-- The label tag displays the name or description of an input field. -->
+            <!-- The for attribute connects the label to an input using its id. -->
+            <label for="username">Enter your Username</label>
+
+            <!-- The input tag is used to collect data from the user. -->
+            <!-- type="text" creates a single-line text input field. -->
+            <!-- id uniquely identifies this input and connects it to the label. -->
+            <!-- name specifies the key used when form data is submitted. -->
+            <!-- placeholder displays a hint inside the input field. -->
+            <!-- autofocus automatically focuses this field when the page loads. -->
+            <input type="text" id="username" name="username" placeholder="Enter your username" autofocus>
+        </div>
+
+
+        <div>
+            <!-- type="radio" creates a radio button. -->
+            <!-- Radio buttons with the same name allow the user to select only one option. -->
+            <!-- The value attribute specifies the value sent to the server when the form is submitted. -->
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </div>
+
+        <div>
+            <!-- type="checkbox" creates a checkbox. -->
+            <!-- The user can check or uncheck this option. -->
+            <!-- The value is submitted only when the checkbox is checked. -->
+            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+            <label for="subscribe">Subscribe to newsletter</label>
+        </div>
+
+
+        <div>
+            <!-- The textarea tag creates a multi-line text input field. -->
+            <!-- rows specifies the visible number of text lines. -->
+            <!-- cols specifies the visible width of the text area in characters. -->
+            <label for="comment">Enter your comment</label>
+            <br>
+            <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+        </div>
+
+        <div>
+            <!-- The select tag creates a dropdown list. -->
+            <!-- The option tag defines an item inside the dropdown. -->
+            <!-- The value attribute specifies the value submitted for the selected option. -->
+            <!-- The multiple attribute can be used to allow users to select more than one option. -->
+            <select name="fruits">
+                <option value="apple">Apple</option>
+                <option value="banana">Banana</option>
+                <option value="cherry">Cherry</option>
+          </select>
+        </div>
+
+    </form>
+    
+</body>
+
+</html>
+
+<!-- GET and POST are HTTP request methods, not HTML attributes. -->
+<!-- The method attribute specifies which HTTP request method is used. -->
+<!-- GET is commonly used to retrieve data, while POST is commonly used to submit data. -->
+
+<!-- label displays the name or description of an input field. -->
+<!-- for connects the label to an input using its id. -->
+<!-- id uniquely identifies an HTML element. -->
+<!-- name defines the key used when submitting form data. -->
+<!-- value defines the value submitted for an input. -->
+<!-- Radio buttons with the same name belong to the same group. -->
+
+<!-- The div tag is used to group related HTML elements together. -->
+<!-- The br tag is used to create a line break. -->
+<!-- The br tag is a void element and does not need a closing tag. -->
+<!-- Avoid using too many br tags for spacing or layout; use CSS instead. -->
