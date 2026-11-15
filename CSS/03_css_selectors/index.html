@@ -1,0 +1,113 @@
+<!-- CSS selectors allow us to choose specific elements and apply styles to them. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+
+        /* Element selector */
+        /* Selects all div elements. */
+        div{
+            /* background-color: aqua; */
+        }
+
+        /* Class selector */
+        /* Selects all elements with the class name black. */
+        .black{
+            background-color: black;
+            color: aqua;
+        }
+
+        /* ID selector */
+        /* Selects the element with the ID green. */
+        #green{
+            background-color: yellow;
+        }
+
+        /* Child selector */
+        /* Selects p elements that are direct children of div. */
+        div > p{
+            background-color: orange;
+        }
+
+        /* Descendant Selector  */
+        /* Selects all p elements inside div, at any nesting level. */
+        div p{
+            background-color: orange;
+        }
+
+        /* Universal Selector */
+        /* Selects all elements on the page. */
+        * {
+            margin:0;
+            padding: 0;
+        }
+
+        /* Grouping selector */
+        /* Applies the same styling to h3 and h4 elements. */
+        h3 ,h4{
+            color: red;
+        }
+
+
+        /* Pseudo selector */
+        /* Selects p elements that are the first child of their parent. */
+        p:first-child{
+            background-color: gray;
+        }
+
+        /* Applies styling to visited links. */
+        a:visited{
+            color: rgb(218, 60, 134);
+        }
+
+        /* Applies styling to unvisited links. */
+        a:link{
+            color: green;
+        }
+
+        /* Applies styling while the link is being clicked. */
+        a:active{
+            background-color: #aeee36;
+        }
+
+        /* Applies styling when the mouse pointer is over the link. */
+        a:hover{
+            background-color: #eed1ec;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="black">I am a div</div>
+
+    <div id="green">I am another div</div>
+
+    <div> 
+        <p>Hey I am para</p>
+    </div>
+
+    <div>
+        <article>
+            <p>Hey I am another para</p>
+        </article>
+    </div>
+
+    <h3>Hii</h3>
+    <h4>Hiii</h4>
+
+    <main>
+        <p>I am first para</p>
+        <p>I am second para</p>
+    </main>
+
+    <a href="https://www.google.com">Open Google</a>
+    
+</body>
+
+</html>

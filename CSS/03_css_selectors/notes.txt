@@ -1,0 +1,45 @@
+1) Element selector selects all elements of the specified tag name wherever they appear on the page.
+
+2) Class selector selects all elements having the specified class name. The same class can be used on multiple elements.
+
+3) ID selector selects the element having the specified ID. An ID should be unique within an HTML page.
+
+4) Child selector (>) selects only direct children of the specified parent element. It does not select nested descendants.
+
+5) Descendant selector (space) selects all matching elements inside the specified parent, including direct and nested descendants.
+
+6) Universal selector (*) selects all HTML elements on the page.
+
+7) Grouping selector (,) applies the same CSS styles to all specified selectors.
+
+8) Pseudo-class selector selects elements based on their state, condition or position.
+
+9) :first-child selects an element only if it is the first child of its parent.
+
+10) :visited selects links that the user has already visited.
+
+11) :link selects unvisited links.
+
+12) :active applies styles while an element is being activated, such as while clicking a link.
+
+13) :hover applies styles when the mouse pointer moves over an element.
+
+14) Attribute selector selects elements based on the presence or value of their HTML attributes.
+
+15) Pseudo-element selector targets a specific part of an element or creates generated content.
+
+16) ::first-letter targets the first letter of the selected element's text.
+
+17) ::first-line targets the first formatted line of the selected element's text.
+
+18) ::before inserts generated content before the actual content of an element.
+
+19) ::after inserts generated content after the actual content of an element.
+
+20) :nth-child() selects an element based on its position among all siblings of its parent.
+
+21) :focus applies styles when an element receives focus, such as when an input field is selected.
+
+22) :checked selects checkbox or radio button elements that are currently checked.
+
+23) :not() selects elements that do not match the specified selector.
