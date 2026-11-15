@@ -1,0 +1,24 @@
+1.Obsolete HTML Tags:
+-Obsolete tags are HTML tags that are no longer recommended for use.
+-Older tags may still work in modern browsers, but their use is discouraged. 
+-Use CSS instead of obsolete tags for styling and layout. 
+-Use semantic HTML5 tags to give meaningful structure to a webpage. 
+
+2.HTML Entities:
+-HTML entities are used to display reserved characters and special symbols. 
+-HTML entities start with an ampersand (&) and end with a semicolon (;). 
+-&lt; is used to display the less-than (<) symbol. 
+-&gt; is used to display the greater-than (>) symbol.
+-&amp; is used to display the ampersand (&) symbol. 
+-&copy; is used to display the copyright symbol (©). 
+-&nbsp; is used to add a non-breaking space. 
+
+3.Canvas:
+-The canvas tag is used to draw graphics on a webpage. 
+-JavaScript is generally used with canvas to draw and control graphics. 
+
+4.Global Attributes:
+-Global attributes can be used on most HTML elements. 
+-The accesskey attribute specifies a keyboard shortcut for an element. 
+-The class attribute assigns one or more class names to an element. 
+-The contenteditable attribute specifies whether an element's content can be edited by the user. 
