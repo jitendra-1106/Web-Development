@@ -1,0 +1,20 @@
+/*
+A class is selected using a dot (.) followed by its class name.
+An ID is selected using a hash (#) followed by its ID name.
+*/
+
+/* Selects all elements having the red class. */
+.red{
+    color: red;
+}
+
+.bg-yellow{
+    background-color: yellow;
+}
+
+/* Selects the element having the firstdiv ID. */
+/*
+#firstdiv{
+    background-color: aqua;
+}
+*/
