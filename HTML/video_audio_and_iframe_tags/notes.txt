@@ -1,0 +1,39 @@
+1.Video Tag:
+The video tag is used to embed a video on a webpage. 
+The src attribute specifies the path to the video file. 
+The controls attribute displays video controls like play, pause and volume. 
+The width attribute specifies the width of the video. 
+The height attribute specifies the height of the video. 
+The poster attribute specifies an image displayed before the video starts playing. 
+The autoplay attribute automatically starts playing the video when the page loads. 
+The loop attribute plays the video again after it ends. 
+The muted attribute mutes the video by default. 
+
+2.Audio Tag:
+The audio tag is used to embed audio on a webpage. 
+The src attribute specifies the path to the audio file. 
+The controls attribute displays audio controls like play, pause and volume. 
+The autoplay attribute attempts to play audio automatically when the page loads. 
+The loop attribute plays the audio again after it ends. 
+The muted attribute mutes the audio by default. 
+The preload attribute specifies how much audio data should be loaded when the page loads. 
+
+3.Iframe Tag:
+The iframe tag is used to embed another webpage or external content within the current webpage. 
+The src attribute specifies the URL of the content to embed. 
+The width attribute specifies the width of the iframe. 
+The height attribute specifies the height of the iframe. 
+The frameborder attribute was used to control the iframe border; CSS is preferred now. 
+The name attribute gives the iframe a name that can be used as a target for links or forms.  
+The scrolling attribute is obsolete in modern HTML; use CSS for scrolling behavior. 
+
+4.Svg Tag:
+The svg tag is used to create scalable vector graphics. 
+The height attribute specifies the height of the SVG area. 
+The width attribute specifies the width of the SVG area. 
+The circle tag is used to draw a circle. 
+cx and cy specify the center position of the circle. 
+The r attribute specifies the radius of the circle. 
+The stroke attribute specifies the outline color. 
+The stroke-width attribute specifies the outline thickness. 
+The fill attribute specifies the inside color of the circle. 

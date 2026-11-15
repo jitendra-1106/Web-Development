@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="100" width="100">
+    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+</svg>
+
+<!-- The xmlns attribute declares the XML namespace for SVG. -->
+<!-- It identifies the SVG elements as part of the SVG namespace. -->
+<!-- This declaration helps browsers recognize and render the SVG correctly as an external image using the img tag. -->
