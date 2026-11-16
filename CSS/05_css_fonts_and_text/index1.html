@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts</title>
+
+    <!-- Connects the HTML document to Google Fonts. -->
+    <!-- Google Fonts provides a wide variety of fonts that can be used on a website instead of relying only on system fonts. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Imports the Roboto font from Google Fonts. -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+
+    <style>
+
+        /* Alternative to the link tag for importing Google Fonts. */
+        /* Imports the Roboto font from Google Fonts using CSS. */
+        /* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap'); */
+
+        /* Sets the font family for all h1 elements. */
+        /* Fallback fonts are alternative fonts used when the preferred font is not available on the user's system or browser. */
+        /* Multiple fonts are provided in font-family so the browser can try the next available font if the previous one is unavailable. */
+        /* Generic font families like serif, sans-serif and monospace provide a final font category for the browser to choose from. */
+        h1{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        p{
+            /* Sets the font family for all paragraph elements. */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+            /* Makes the text italic. */
+            font-style: italic;
+
+            /* Sets the thickness of the text. */
+            font-weight: 600;
+
+            /* Sets the size of the text. */
+            font-size: 20px;
+
+            /* Sets the vertical spacing between lines of text. */
+            line-height: 1.8;
+
+            /* Controls the spacing between letters. */
+            letter-spacing:normal;
+
+        }
+
+        /* Applies the Roboto font to all paragraph elements. */
+        .black{
+        font-family: "Roboto", sans-serif;
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- https://codepen.io/web-dot-dev/pen/yLojraG -->
+    <div>
+        <h1>Fonts</h1>
+        <p>This is on CSS Fonts</p>
+        <p class="black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel animi maiores quia deleniti, itaque at nisi, error amet eaque sit, nulla labore deserunt!</p>
+    </div>
+</body>
+
+</html>
+
