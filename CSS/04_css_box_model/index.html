@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+
+    <style>
+
+        /* Removes default margin and padding from all HTML elements. */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Applies a black background to elements having the box class. */
+        .box{
+            background-color: black;
+        }
+
+        .box1{
+            color: aqua;            /* Changes the text color. */
+            padding: 10px;            /* Adds space between content and border. */
+            margin: 35px;             /* Adds space outside the border. */
+            border: 5px solid red;  /* Adds a 5px solid red border. */
+            height: 200px;            /* Sets the height of the box. */
+            width: 400px;             /* Sets the width of the box. */
+            box-sizing: border-box;   /* Includes padding and border within the specified height and width. */
+
+        }
+
+        .box2{
+            color: yellow;
+            padding: 10px;
+            margin: 25px;
+            border: 5px solid red;
+            height: 200px;
+            width: 400px;
+            box-sizing: border-box;
+        }
+        
+        /*
+        Before applying box-sizing: border-box, the specified height and width are given only to the content, while padding and border are added separately, increasing the total size.
+        After applying box-sizing: border-box, the same specified height and width include content, padding and border. All three are adjusted within that size, so the content area becomes smaller.
+        Margin is not included in the specified height and width; it always remains outside the box.
+        */
+        /*
+        Margin Collapse:
+        When two vertical block elements have margins next to each other,
+        their vertical margins collapse into a single margin instead of adding together.
+        The larger margin is applied, not the sum of both margins.
+        For example, if one element has margin-bottom: 30px and the next has margin-top: 20px,
+        the resulting space between them will be 30px, not 50px.
+        */
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Displays the first box using both box and box1 classes. -->
+    <div class="box box1">I am a box</div>
+
+    <!-- Displays the second box using both box and box2 classes. -->
+    <div class="box box2">I am another box</div>
+</body>
+
+</html>
+
