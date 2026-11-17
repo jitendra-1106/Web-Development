@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows and outlines</title>
+
+    <style>
+        .box {
+            
+            border: 2px solid black;
+            padding: 30px;
+
+            /* Adds a shadow around the element's box. */
+            /* Values represent horizontal offset, vertical offset, blur radius and shadow color. */
+            box-shadow: 5px 15px 5px purple;
+
+        }
+
+        .text {
+            border: 2px solid green;
+
+            /* Adds a shadow to the text. */
+            /* Values represent horizontal offset, vertical offset, blur radius and shadow color. */
+            text-shadow: 10px 5px 3px red;
+
+            /* Rounds the corners of the element's border. */
+            border-radius: 7px;
+
+            /* Outline follows the shape of the element's border, including rounded corners.
+            It surrounds the entire element and cannot be styled separately for each side like a border.
+            It can extend beyond the border without affecting the element's layout.
+            Here, 2px is the thickness of outline. */
+            outline: 2px solid orange;
+
+            /* Adds space between the border and the outline. */
+            outline-offset: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        I am a box.
+    </div>
+
+    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil commodi impedit totam iure suscipit
+        modi officiis ratione debitis itaque possimus. Magnam, neque veniam.</p>
+</body>
+
+</html>
