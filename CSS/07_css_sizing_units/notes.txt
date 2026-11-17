@@ -1,0 +1,67 @@
+(1) px, em and rem:
+/* px (pixels) is a fixed CSS unit and does not depend on the parent or viewport size. */
+
+/* em is relative to the parent's computed font size when used in font-size.
+   For other properties like padding, em is relative to the element's own font size. */
+
+/* rem is relative to the root HTML element's font size.
+   Example: If html font-size is 12px, then 2rem = 24px. */
+
+
+(2) vw and vh:
+/* vw (viewport width) is relative to the browser window's width.
+   1vw = 1% of the viewport width. */
+
+/* vh (viewport height) is relative to the browser window's height.
+   1vh = 1% of the viewport height. */
+
+/* Use vw for sizes that should depend on screen width
+   and vh for sizes that should depend on screen height. */
+
+
+(3) vmin and vmax:
+/* vmin is relative to the smaller dimension of the viewport (width or height).
+   1vmin = 1% of the smaller viewport dimension. */
+
+/* vmax is relative to the larger dimension of the viewport (width or height).
+   1vmax = 1% of the larger viewport dimension. */
+
+/* Example: If viewport width is 1200px and height is 800px:
+   1vmin = 8px and 1vmax = 12px. */
+
+/* On a laptop, height is often the smaller viewport dimension,
+   so vmin is usually based on height. */
+
+/* On a mobile phone, width is often the smaller viewport dimension,
+   so vmin is usually based on width. */
+
+/* This is why vmin automatically adjusts according to the screen's
+   smaller dimension, without needing separate laptop and mobile values. */
+
+
+(4) Percentage (%):
+/* Percentage (%) is generally relative to the parent element's content size
+   when used for width. */
+
+/* Example: If the parent's content width is 500px,
+   then width: 50% gives the child a width of 250px. */
+
+/* Use percentage when an element's size should depend on its parent
+   instead of the entire viewport. */
+
+
+(5) min-width and min-height:
+/* min-width, min-height, max-width and max-height are CSS properties, not units. */
+
+/* min-width and min-height set the minimum size an element can have. */
+
+/* max-width and max-height set the maximum size an element can have. */
+
+/* Use min-width and min-height when an element should not become smaller than a required size. */
+
+/* Use max-width and max-height when an element should not grow beyond a required size. */
+
+/* These properties help control element sizes and create responsive layouts. */
+
+
+

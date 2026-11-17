@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sizing Units</title>
+
+    <style>
+
+        *{
+            /* Removes the browser's default margin and padding from all elements. */
+            margin: 0;
+            padding: 0;
+        }
+
+        html{
+            /* Sets the root font size, which is used as the reference for rem units. */
+            font-size: 12px;
+        }
+
+        .box{
+            /* Includes content, padding and border within the specified width and height. */
+            box-sizing: border-box;
+            border: 2px solid black;
+
+            /* Sets a fixed width using pixels (px). */
+            /* width: 2048px; */
+
+            /* Sets the width relative to the viewport width (1vw = 1% of viewport width). */
+            width: 80vw;
+            /* Sets the height relative to the viewport height (1vh = 1% of viewport height). */
+            height: 10vh;
+
+            /* Automatically distributes horizontal margins to center the element when space is available. */
+            margin: auto;
+            background-color: aquamarine;
+        }
+
+        .container1{
+            box-sizing: border-box;
+            border: 2px solid black;
+            /* width: 2048px; */
+            width: 80vw;
+            /* height: 80vh; */
+
+            /* Sets the minimum height of an element; it can grow if its content needs more space. */
+            min-height: 80vh;
+            margin: 23px auto;
+
+            /* Sets the font size of this element. Child elements inherit this size unless their own font size is specified. */
+            font-size: 18px;
+            background-color: aquamarine;
+        }
+
+        .container1 > p{
+
+            /*em is relative to the computed font size of the parent element when used in font-size.
+            If the parent has no explicitly defined font-size, em uses its inherited font size.
+            If no font size is defined anywhere, the browser's default font size is generally 16px*/
+
+            /* em is relative to the font size of the parent element. Here, 2em = 2 × 18px = 36px. */
+            font-size: 2em; 
+
+            /* rem is relative to the root HTML font size. Here, 2rem = 2 × 12px = 24px. */
+            /* font-size: 2rem; */
+        }
+
+        .mycont{ 
+            border: 2px solid black;
+            box-sizing: border-box;
+            margin: 23px auto;
+            color: rgb(0, 0, 0);
+            font-size: 22px;
+
+            /* Sets the width relative to the smaller dimension of the viewport. */
+            /* 1vmin = 1% of the smaller value between viewport width and height. */
+            /* width: 100vmin; */
+
+            /* Sets the width relative to the larger dimension of the viewport. */
+            /* 1vmax = 1% of the larger value between viewport width and height. */
+            /* width: 100vmax; */
+
+            width: 80vw;
+        }
+
+        .percent{
+            box-sizing: border-box;
+            border: 2px solid black;
+            /* width: 2048px; */
+            width: 80vw;
+            /* height: 80vh; */
+            min-height: 80vh;
+            margin: 23px auto;
+            font-size: 18px;
+            background-color: aquamarine;
+        }
+        .percent > div{
+            font-size: 2em; 
+            border: 2px solid red;
+
+            /* Sets the width relative to the parent element's content width. */
+            width: 50%;
+        }
+
+        .percent > div > div{
+            border: 2px solid blue;
+
+            /* Sets the width to 50% of its direct parent's content width. */
+            width: 50%;
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Values_and_Units -->
+
+    <div class="box">
+        This is a box
+    </div>
+
+    <div class="container1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, minima sequi. Sint incidunt consectetur corrupti quasi itaque error quidem nostrum quos ex magnam.</p>
+        <p> Expand this to see that this container will adjust its height lorem999 </p>
+    </div>
+
+    <div class="mycont">
+        I am another container
+    </div>
+
+    <div class="percent">
+        <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error vel reiciendis quisquam perferendis id mollitia laborum esse incidunt, suscipit ducimus eius saepe. Delectus.
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime.</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
