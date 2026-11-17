@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow Property</title>
+
+    <style>
+        .box {
+
+            /* Sets the width relative to the viewport width. */
+            width: 30vw;
+
+            /* Sets the height relative to the viewport height. */
+            height: 30vh;
+
+            /* Adds a border around the element. */
+            border: 2px solid black;
+
+            /* visible: Content is not clipped and can overflow outside the element.
+       This is the default value. */
+            /* overflow: visible; */
+
+            /* hidden: Hides the overflowing content and does not show scrollbars. */
+            /* overflow: hidden; */
+
+            /* scroll: Always shows scrollbars, even when the content does not overflow. */
+            /* overflow: scroll; */
+
+            /* auto: Shows scrollbars only when the content overflows and scrolling is needed. */
+            /* overflow: auto; */
+
+
+            /* Controls horizontal and vertical overflow separately.*/
+            /* overflow-x: hidden;
+            overflow-y: scroll; */
+
+            /* Shorthand: First value controls horizontal overflow (x),
+            and second value controls vertical overflow (y). */
+            overflow: auto hidden;
+
+            /* Prevents text from wrapping and keeps it on a single line. */
+            /* white-space: nowrap; */
+
+            /* Displays (...) when text overflows its available space.
+            The hidden text is not revealed by scrolling. */
+            /* text-overflow: ellipsis; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        I am a good boy and I love to write Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta iure amet
+        unde voluptas nihil vero, maxime esse quis quos natus rem, earum aspernatur quasi aut ea commodi nostrum
+        voluptate! Sint rerum nostrum perferendis sapiente explicabo perspiciatis, ut magni? Aspernatur, provident
+        dolorum unde corporis doloribus rem!
+    </div>
+</body>
+
+</html>
