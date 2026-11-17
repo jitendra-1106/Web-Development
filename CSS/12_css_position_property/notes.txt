@@ -1,0 +1,53 @@
+(1) Position Property:
+/* position controls how an element is placed in the document. */
+/* A positioned element is an element whose position property
+   is relative, absolute, fixed or sticky (not static). */
+/* top, right, bottom and left control the position of positioned elements. */
+
+
+(2) Static:
+/* static is the default position value.
+   The element stays in normal document flow.
+   top, right, bottom and left do not affect its position. */
+position: static;
+
+
+(3) Relative:
+/* relative keeps the element in normal document flow.
+   It moves from its original position using top, right, bottom or left.
+   Its original space remains reserved. */
+position: relative;
+
+
+(4) Absolute:
+/* absolute removes the element from normal document flow.
+   It is positioned relative to its nearest positioned ancestor.
+   If no such ancestor exists, it uses the initial containing block.
+   Its original space is not reserved. */
+position: absolute;
+
+
+(5) Fixed:
+/* fixed removes the element from normal document flow.
+   It is generally positioned relative to the viewport
+   and stays in place while scrolling.
+   A transformed, filtered or perspective ancestor can change its containing block. */
+position: fixed;
+
+
+(6) Sticky:
+/* sticky keeps the element in normal document flow.
+   It behaves like relative until it reaches the specified scroll position,
+   then sticks within its scrolling container.
+   At least one inset value, such as top, is generally needed. */
+position: sticky;
+top: 0;
+
+
+(7) Z-index:
+/* z-index controls the stacking order of overlapping elements.
+   A higher z-index generally places an element in front of a lower one.
+   It works on positioned elements and certain other elements,
+   such as flex and grid items.
+   It cannot move an element outside its stacking context. */
+z-index: 1;
