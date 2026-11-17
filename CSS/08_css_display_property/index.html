@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Properties</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .ok{
+            /* Changes the block element into an inline element. */
+            display: inline;
+        }
+
+        .okk{
+            /* Changes the inline element into a block element. */
+            display: block;
+        }
+
+        .box {
+            border: 2px solid blue;
+
+            /* Keeps the element in the same line while allowing width and height. */
+            display: inline-block;
+
+            /* Width and height work with block and inline-block elements. */
+            width: 344px;
+            height: auto;
+
+            /* Padding works on all four sides of block and inline-block elements. */
+            padding:45px;
+            margin: 34px; 
+
+            /* In normal inline elements, left and right margins affect the layout,
+            but top and bottom margins do not affect the layout. */
+            /* Padding works on all four sides of inline elements,
+            but top and bottom padding do not push surrounding lines apart. */
+            /* In block and inline-block elements, margin and padding work on all four sides. */
+        }
+
+        /* .box1{
+
+            <Hides the element and removes its space from the page layout.>
+            display: none; 
+
+            < Hides the element but keeps its space in the page layout. >
+            visibility: hidden;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/display -->
+
+    <div class="ok">
+        I am a block element.
+    </div>
+
+    <div class="ok">
+        I am also a block element.
+    </div>
+
+    <span class="okk">I am a inline element.</span>
+
+    <span class="okk">I am also a inline element.</span>
+
+    <div class="box box1">
+        I am a box.
+    </div>
+
+    <div class="box">
+        Also a nice box.
+    </div>
+
+    <span>I am a good</span>
+    <span>boy</span>
+
+
+
+</body>
+
+</html>
