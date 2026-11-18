@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+
+    <style>
+
+        /* :root selects the root HTML element.
+        Variables declared here are global and can be accessed throughout the stylesheet.
+        Use global variables for common values that are reused in multiple places. */
+        :root{
+            /* CSS variables are declared using -- before their names. */
+            --color:green;
+            --seccolor:orange;
+            --defpad: 23px;
+            --defop: 0.9;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul{
+            display: flex;
+        }
+
+        /* Global variables can be accessed here using var(). */
+        .nav{
+            background-color: var(--seccolor);
+        }
+
+        ul li{
+            /* Uses the value stored in the global variable. */
+            opacity: var(--defop);
+            list-style: none;
+            padding: var(--defpad);
+            border: 2px solid var(--color);
+            
+        }
+
+        /* A variable declared inside a selector is local to that element
+        and its descendants because CSS variables are inherited.
+        It overrides a global variable with the same name within this scope. */
+        ul li:first-child{
+            /* Overrides the inherited variable value for this element and its descendants. */
+            --color:aqua;
+
+            /* Uses the local value of --color.
+            Maroon is used as a fallback if --color is unavailable or invalid. */
+            background-color:var(--color, maroon);
+
+        }
+
+        .container{
+            background-color: var(--seccolor);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati deserunt rerum tenetur est inventore consequuntur cumque tempore dolorum iusto hic, nesciunt doloribus non.
+    </div>
+</body>
+
+</html>
