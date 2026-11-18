@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+
+    <style>
+        /* Sets the default background color for all screen sizes.
+        Media queries can override these styles for specific conditions. */
+        body {
+            background-color: #f2f52f;
+        }
+
+        /* Media queries are used to create responsive web designs.
+        They apply different CSS styles based on screen size,
+        orientation and other device conditions.
+        This helps a website adjust its layout for mobile, tablet and desktop screens.
+
+        Syntax:
+        @media not|only mediatype and (expressions) {
+            CSS-Code;
+        } */
+
+        /* Applies these styles only to screen devices
+        when the viewport width is 455px or less.
+        Useful for adjusting the layout on smaller screens like mobiles. */
+        @media only screen and (max-width: 455px) {
+            body {
+                background-color: #ee7979;
+            }
+
+            /* Applies these styles only to screen devices
+            when the viewport width is 455px or less.
+            Useful for adjusting the layout on smaller screens like mobiles. */
+            .boxes {
+                flex-direction: column;
+            }
+        }
+
+        /* Applies these styles when the screen is in landscape orientation.
+        Landscape means the viewport width is greater than its height. */
+        @media screen and (orientation: landscape) {
+            body {
+                border: 2px solid rgb(231, 16, 27);
+            }
+        }
+
+        /* Changes the flex direction from row to column,
+        arranging the boxes one below another on smaller screens. */
+        .boxes {
+            display: flex;
+        }
+
+        .box {
+            width: 250px;
+            height: 300px;
+            padding: 4px;
+            margin: 2px;
+            background-color: #72fd79;
+        }
+    </style>
+</head>
+
+<body>
+    <div>Hey I am a box.</div>
+
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>
