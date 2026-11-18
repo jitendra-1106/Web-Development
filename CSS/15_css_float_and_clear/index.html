@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float & Clear</title>
+
+    <style>
+        .cards {
+            border: 2px solid rgb(35, 226, 35);
+            /* If floated elements overflow outside the parent,
+            use display: flow-root on the parent to contain them.*/
+            display: flow-root;
+
+            /*Alternatively, overflow: auto can also contain floated children
+            and include them in the parent's height.
+
+            You can also adjust the margin or spacing when elements
+            are overlapping or extending beyond the expected layout. */
+        }
+
+        .card {
+            border: 2px solid red;
+        }
+
+        img {
+            /* Moves the image to the left side.
+            Following content flows around the floated image. */
+            float: left;
+        }
+
+        .card:nth-child(3) {
+            background-color: aquamarine;
+            /* Prevents the element from appearing beside left-floated elements. */
+            /* clear: left; */
+
+            /* Prevents the element from appearing beside right-floated elements. */
+            /* clear: right; */
+
+            /* Prevents the element from appearing beside both left- and right-floated elements.
+            It moves below the floated elements when necessary. */
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cards">
+        <img src="https://media.istockphoto.com/id/928826678/photo/two-men-relaxing-and-fishing.jpg?s=2048x2048&w=is&k=20&c=fSG5LG9kxLNzjG9_YI1bXdz3-gD7UW2e2bd9arD5Vm8="
+            alt="" width="230">
+        <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, aspernatur reprehenderit.
+            Laudantium delectus quae natus fugit? Consequuntur unde et odit esse eius alias.</div>
+        <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quod minima rerum fugit
+            quas cupiditate neque ipsam officia, vero fugiat natus laborum, voluptas voluptates enim aspernatur, ab
+            quasi? Magnam consequatur ea amet sed at. Ducimus, ad pariatur similique suscipit fugit molestias laudantium
+            magnam? Quaerat porro quam illum beatae quibusdam rem, omnis magni possimus consectetur unde sit culpa saepe
+            dolores, incidunt labore sed! Dolorem, cumque eaque. Odio corrupti, aliquid dolore in numquam sunt nulla
+            dicta rerum, quidem nostrum enim, consequuntur saepe provident earum recusandae quibusdam quam! Voluptatum
+            architecto ullam expedita itaque ipsam totam ad doloremque magni, non debitis dolorum nemo repellendus
+            maxime aut id vel officiis rem asperiores accusamus. Officia labore excepturi eius asperiores sequi?
+            Explicabo, saepe repellat, voluptates error ex quod ab quaerat at, debitis dolorem distinctio. Perspiciatis
+            maxime voluptatem ducimus, quasi enim minima facere voluptates tempora sequi atque, laudantium soluta
+            deleniti at magni labore, laborum consequatur placeat. Mollitia rem consequuntur, harum minus aliquid culpa
+            optio similique corrupti quod quae possimus, aperiam expedita voluptas quis officia, nemo error provident
+            molestiae architecto tempore explicabo alias voluptate. Id facere consequatur, vitae perferendis, corporis
+            voluptas dolor dolore corrupti sunt libero sit laudantium et odio, pariatur exercitationem temporibus
+            aliquid illum? Pariatur ipsum id odit sequi fuga vitae, iure beatae, quae saepe qui officiis iste incidunt
+            dolor cumque sint minus dignissimos unde blanditiis necessitatibus quia natus laboriosam consectetur
+            exercitationem? Aliquid sequi laudantium, omnis vero fugiat cum earum ut eum rerum! Aliquid, laborum. Fugit
+            neque reiciendis debitis libero distinctio earum, ratione eaque, laborum tempora fuga repudiandae culpa
+            saepe sunt ex maiores. Sint consequuntur praesentium, repellendus ea cupiditate laborum? Ratione dolore sit
+            explicabo autem error, cupiditate voluptates nostrum ex! Nisi nobis placeat voluptates sit dolore non
+            similique ut maxime, adipisci nam impedit labore quod ipsum omnis expedita obcaecati ipsa consectetur odio.
+            Sequi vitae architecto rerum quidem amet optio deserunt praesentium exercitationem odio laboriosam
+            voluptatum quas molestiae, ab aliquid corrupti hic est omnis ducimus! Error tenetur a quas placeat
+            temporibus iusto quidem exercitationem, assumenda corrupti debitis inventore libero quis sint sequi?</div>
+        <div class="card">card3</div>
+    </div>
+</body>
+
+</html>
