@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+
+    <style>
+
+        /* Selects the first child element if it also has the class "box".
+        Applies the style only when .box is the first child of its parent. */
+        /* .box:first-child{
+            background-color: red;
+        } */
+
+        /* Selects the first line of text inside an element with class "box".
+        The selected line can change depending on the available width. */
+        /* .box::first-line{
+            color: aqua;
+        } */
+
+        /* Selects all descendant elements inside an element with class "boxes".
+        The universal selector (*) matches every element at any nesting level. */
+        /* .boxes *{
+            color: blue;
+            border: 2px solid black;
+        } */
+
+        /* Selects even/odd-numbered child elements (1st, 3rd, 5th, etc.)
+        based on their position among all siblings.
+        The element does not need to have the class "box" to affect the counting. */
+        /* .box:nth-child(odd){
+            background-color: orange;
+        } */
+
+        /* Selects an element with class "box" only if it is the second child
+        of its parent. */
+        /* .box:nth-child(2){
+            background-color: gray;
+        } */
+
+        /* Selects an element with class "box" only if it is the last child
+        of its parent. */
+        /* .box:nth-last-child(1){
+            background-color: green;
+        } */
+
+        /* Inserts generated content before the actual content of .boxes.
+        The content property is required for ::before to display generated content. */
+        .boxes::before{
+            content: "Jitendra is good";
+            color: blueviolet;
+        }
+
+        /* Inserts generated content after the actual content of .boxes.
+        The generated content is not added to the HTML document itself. */
+        .boxes::after{
+            content: "Sigma web dev.course is also good";
+            color: bisque;
+        }
+
+        /* Styles the portion of text selected by the user.
+        Works across different text elements on the page. */
+        ::selection{
+            background-color: black;
+            color: aqua;
+        }
+
+        /* Selects the first letter of the text inside elements with class "box". */
+        .box::first-letter{
+            color: brown;
+            font-size: 22px;
+        }
+
+        /* Styles the placeholder text displayed inside input elements.
+        The placeholder is a hint and disappears when the user enters a value. */
+        input::placeholder{
+            color: yellow;
+        }
+
+        /* Groups multiple selectors so the same CSS rules can be applied to all of them.
+        The attribute selector [data-color="primary"] selects elements
+        whose data-color attribute has the exact value "primary". */
+        /* p,a,.box,[data-color="primary"]{
+            padding-top: 23px;
+        } */
+
+
+        /* Selector reference:
+        .box                  - Class selector
+        input                 - Element (type) selector
+        *                     - Universal selector
+        [data-color="primary"] - Attribute selector
+        p, a, .box            - Grouping selector
+        #example              - ID selector
+
+        :first-child          - Pseudo-class
+        :nth-child()          - Pseudo-class
+        :nth-last-child()     - Pseudo-class
+
+        ::before              - Pseudo-element
+        ::after               - Pseudo-element
+        ::first-line          - Pseudo-element
+        ::first-letter        - Pseudo-element
+        ::selection           - Pseudo-element
+        ::placeholder         - Pseudo-element */
+
+        /* ::before and ::after are pseudo-elements used to insert
+        generated content before or after an element's actual content.
+        They help create decorative and dynamic designs using CSS
+        without adding extra HTML elements.
+        The content property is required to display them. */
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <div
+        data-color="primary" class="box">Hey I am a box</div>
+        <div class="box">Hey I am a box</div>
+        <div class="box">Hey I am a box</div>
+        <input type="text" placeholder="Enter name">
+    </div>
+</body>
+
+</html>
