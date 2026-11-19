@@ -1,0 +1,199 @@
+----------------------------------------------------------------------------->
+# Flexbox – Container Properties
+
+```css
+/* display: flex enables Flexbox layout.
+   The direct children of the container become flex items. */
+display: flex;
+
+
+/* flex-direction controls the direction in which flex items are placed.
+   The direction in which items are placed is called the main axis.
+   The perpendicular direction is called the cross axis.
+
+   row: Items are placed from left to right (default).
+   row-reverse: Items are placed from right to left.
+   column: Items are placed from top to bottom.
+   column-reverse: Items are placed from bottom to top. */
+flex-direction: row;
+
+
+/* flex-wrap controls whether flex items can move to the next line.
+/* flex-wrap: wrap moves items to the next line when there is not enough space.
+   However, it does not automatically reduce the size of items. */
+   nowrap: Items stay on a single line (default).
+   wrap: Items move to the next line when space is insufficient.
+   wrap-reverse: Items wrap in the reverse cross-axis direction.
+
+   Useful for responsive layouts so items can adjust
+   instead of being forced into a single row. */
+flex-wrap: wrap;
+
+
+/* justify-content aligns flex items along the main axis.
+   It controls horizontal alignment in row direction
+   and vertical alignment in column direction.
+
+   Common values: flex-start, flex-end, center,
+   space-between, space-around and space-evenly. */
+justify-content: center;
+
+
+/* align-items aligns flex items along the cross axis
+   within each flex line.
+
+   In row direction, it controls vertical alignment.
+   In column direction, it controls horizontal alignment.
+
+   Common values: stretch, flex-start, flex-end, center and baseline.
+   It applies to items in each flex line. */
+align-items: center;
+
+
+/* align-content controls the alignment and spacing of multiple flex lines
+   along the cross axis when flex-wrap creates multiple lines.
+
+   It does not align individual items inside a line.
+   It requires extra space along the cross axis to show its effect.
+
+   Common values: flex-start, flex-end, center, space-between,
+   space-around, space-evenly and stretch. */
+align-content: flex-start;
+
+
+/* flex-flow is shorthand for flex-direction and flex-wrap.
+   Example: row wrap means items are placed in a row
+   and can move to the next line when space is insufficient. */
+flex-flow: row wrap;
+
+
+/* gap adds space between flex items.
+   One value: Same gap between rows and columns.
+   Two values: First value is row-gap and second is column-gap. */
+gap: 20px 10px;
+
+
+/* row-gap controls the space between flex rows. */
+row-gap: 20px;
+
+
+/* column-gap controls the space between flex columns. */
+column-gap: 10px;
+```
+
+### Main Axis and Cross Axis
+
+- **Main axis:** The direction in which flex items are arranged.
+- **Cross axis:** The direction perpendicular to the main axis.
+- `row` → Main axis horizontal, cross axis vertical.
+- `column` → Main axis vertical, cross axis horizontal.
+
+### Important Difference
+
+- `justify-content` → Aligns items along the main axis.
+- `align-items` → Aligns items along the cross axis within each line.
+- `align-content` → Aligns multiple flex lines along the cross axis.
+- `align-self` → Overrides `align-items` for one particular item.
+
+Note: Flexbox does not have `justify-items`; use `justify-content` instead.
+
+
+-------------------------------------------------------------------------------->
+# Flexbox – Item Properties
+
+```css
+/* order controls the visual order of flex items.
+   The default value is 0.
+   Lower order values appear before higher order values.
+   Items with the same order follow their HTML source order.
+   It changes visual order, not the actual HTML structure. */
+order: 1;
+
+
+/* flex-grow controls how much an item can grow
+   when extra free space is available.
+
+   Default value is 0, so items do not grow automatically.
+   Higher values receive a greater share of the available free space.
+
+   Example:
+   Item 1: flex-grow: 2;
+   Item 2: flex-grow: 1;
+
+   The available free space is distributed in a 2:1 ratio.
+   Item 1 receives twice the extra space of Item 2. */
+flex-grow: 1;
+
+
+/* flex-shrink controls how much an item shrinks
+   when there is not enough space in the container.
+   /* Higher flex-shrink means the item gets a greater share of shrinking.
+   The actual amount of shrinking also depends on flex-basis and other factors. */
+
+   Default value is 1.
+   A higher value means a greater share of the shrinking,
+   based on the item's flex-basis.
+   flex-shrink: 0 prevents the item from shrinking. */
+flex-shrink: 1;
+
+
+/* flex-basis sets the initial size of a flex item along the main axis.
+   In row direction, it sets the initial width.
+   In column direction, it sets the initial height.
+   The final size can change depending on flex-grow and flex-shrink. */
+flex-basis: 100px;
+
+
+/* align-self controls the alignment of an individual flex item
+   along the cross axis.
+   It overrides the container's align-items property for that item.
+
+   Common values: auto, flex-start, flex-end, center,
+   baseline and stretch. */
+align-self: flex-end;
+
+
+/* flex is shorthand for flex-grow, flex-shrink and flex-basis.
+
+   Example:
+   flex: 1;
+   Allows the item to grow and shrink.
+   In the common one-value syntax, its basis is 0%.
+
+   Example:
+   flex: 0 1 200px;
+   grow: 0, shrink: 1, basis: 200px. */
+flex: 1;
+```
+
+### Understanding flex-grow
+
+- `flex-grow: 0` → Item does not grow automatically.
+- `flex-grow: 1` → Item receives one share of available free space.
+- `flex-grow: 2` → Item receives two shares when compared with an item having grow value 1.
+
+Example: If 300px free space is available and grow values are 2 and 1:
+- First item receives 200px extra.
+- Second item receives 100px extra.
+
+**Remember:** `flex-grow: 2` does not mean the item becomes twice as wide. It means it receives twice the share of free space compared with an item having `flex-grow: 1`.
+
+
+
+--------------------------------------------------------------------------------------->
+(3) Quick revision
+Property	              Category	              Main purpose
+display	                  Container	              Enables Flexbox
+flex-direction	          Container	              Sets main axis direction
+flex-wrap	              Container	              Allows wrapping
+flex-flow	              Container	              Direction + wrapping
+justify-content	          Container	              Main-axis alignment
+align-items	              Container	              Cross-axis alignment within lines
+align-content	          Container	              Multiple flex-line alignment
+gap	                      Container	              Space between items
+order	                   Item	                  Visual order
+flex-grow	               Item	                  Distributes extra space
+flex-shrink	               Item	                  Controls shrinking
+flex-basis	               Item	                  Initial main-axis size
+align-self	               Item	                  Individual alignment
+flex	                   Item	                      Grow + shrink + basis

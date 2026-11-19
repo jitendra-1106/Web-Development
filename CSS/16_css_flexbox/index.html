@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+    <style>
+        .container{
+            border: 2px solid red;
+
+            /* Enables Flexbox layout.
+            Direct children become flex items. */
+            display: flex;
+            height: 80vh;
+
+            /* Aligns flex items along the main axis.
+            center: Places items in the center of the main axis. */
+            justify-content: center;
+
+            /* Aligns flex items along the cross axis.
+            center: Places items in the center of the cross axis. */
+            align-items: center;
+
+             /* Controls the direction of flex items.
+            row: Left to right (default).
+            row-reverse: Right to left.
+            column: Top to bottom.
+            column-reverse: Bottom to top. */
+            /* flex-direction: row-reverse; */
+
+            /* Allows flex items to move to the next line
+            when there is not enough space in the current line. */
+            flex: wrap;
+
+            /* Controls the alignment of multiple flex lines
+            along the cross axis when wrapping occurs. */
+            /* align-content: flex-start; */
+            
+            /* Flexbox does not have justify-items.
+            Use justify-content to align items along the main axis. */
+
+            /* Shorthand for flex-direction and flex-wrap. */
+            /* flex-flow: row wrap; */
+
+            /* Adds space between flex items.
+            First value: row gap.
+            Second value: column gap. */
+            /* gap: 40px 10px; 
+
+            /* gap: 30px; 
+
+            /* Individual gap properties. */
+            /*row-gap: 40px;
+            column-gap: 10px; */
+        }
+
+        .item{
+            border: 2px solid black;
+            background-color: violet;
+            height: 90px;
+            width: 90px;
+            margin: 2px;
+
+            /* Allows an item to grow and take available free space. */
+            /* flex-grow: 1; */
+        }
+
+        /* Controls the visual order of a flex item.
+        Lower order values appear first.
+        Default order is 0.
+        It changes visual order, not the HTML source order. */
+        .order-1{
+            order: 1;
+        }
+        /* .order-2{
+            order: 2;
+        }
+        .order-3{
+            order: 3;
+        } */
+       
+        .item1{
+
+            /* Allows this item to grow and take available free space.
+            Higher values receive a greater share of that space. */
+            /* flex-grow: 2; */
+
+            /* Controls how much an item can shrink when there is not enough space.
+            Higher values mean a greater share of the available shrinking.
+            Default value is 1. */
+            /* flex-shrink: 2; */
+
+            /* Aligns this individual item along the cross axis.
+            Overrides the container's align-items property for this item. */
+            align-self: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item order-1">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+    </div>
+</body>
+
+</html>
