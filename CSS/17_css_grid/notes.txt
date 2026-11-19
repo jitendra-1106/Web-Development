@@ -2,13 +2,12 @@
 
 ## 1. Layout Techniques
 
-| Technique | Purpose |
-|---|---|
-| Normal Flow | Arranges elements in the default document flow |
-| Float | Moves an element left or right, allowing content to wrap around it |
-| Positioning | Places elements at specific positions |
-| Flexbox | One-dimensional layout (row or column) |
-| CSS Grid | Two-dimensional layout (rows and columns) |
+Technique           Purpose 
+Normal Flow         Arranges elements in the default document flow 
+Float               Moves an element left or right, allowing content to wrap around it 
+Positioning         Places elements at specific positions 
+Flexbox             One-dimensional layout (row or column) 
+CSS Grid            Two-dimensional layout (rows and columns) 
 
 ## 2. CSS Grid
 
