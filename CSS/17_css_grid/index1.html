@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid 1</title>
+    <style>
+        .container {
+            border: 2px solid black;
+
+            /* Enables CSS Grid.
+                Direct children become grid items.
+                Grid arranges items in rows and columns. */
+            display: grid;
+
+            /* Defines the height of each row.
+                Each value creates one row.
+                Example: 100px 100px 100px creates 3 rows of 100px each. */
+            /* grid-template-rows: 100px 100px 100px;  */
+
+            /* Defines the width of each column.
+                Example: 120px 100px creates 2 columns. */
+            /* grid-template-columns: 120px 100px; */
+
+            /* Named grid lines can be used instead of remembering line numbers.
+                Names are written inside square brackets.
+                These names can later be used in grid-row and grid-column. */
+            /* grid-template-rows: [pehla]100px [doosra]100px [teesra]100px;
+            grid-template-columns: [first]120px [second]100px [third]; */
+
+            width: 80vw;
+            height: 80vh;
+
+            /* fr means fraction of the available space.
+                1fr 1fr 1fr divides available space into 3 equal columns.
+                1fr 2fr 1fr divides it in the ratio 1:2:1.
+                The available space is distributed after accounting for gaps. */
+            /* grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr; */
+
+
+            /* repeat() avoids writing the same track size multiple times.
+                repeat(4, ...) creates 4 rows.
+                minmax(100px, 1fr) means each row has a minimum size of 100px
+                and can grow up to its available fractional space. */
+            /* grid-template-rows: repeat(4, minmax(100px, 1fr)); */
+
+
+            /* Creates 3 equal-height rows.
+               Each row gets an equal share of available space. */
+            /* grid-template-rows: repeat(3, 1fr); */
+
+            /* Creates 3 columns in the ratio 1:2:1.
+                The middle column gets twice the available space of the other columns. */
+            grid-template-columns: 1fr 2fr 1fr;
+
+
+            /* Sets spacing between grid rows and columns.
+                row-gap controls vertical spacing between rows.
+                column-gap controls horizontal spacing between columns. */
+            row-gap: 10px;
+            column-gap: 20px;
+
+            /* Older shorthand for row-gap and column-gap.
+                First value = row gap, second value = column gap.
+                Use gap as the modern shorthand. */
+            /* grid-gap: 35px; */
+
+
+            /* Aligns grid items horizontally inside their respective grid areas/cell.
+               center places each item in the horizontal center of its grid area.
+               Other values include start, end and stretch. */
+            justify-items: center;
+            /* Aligns grid items vertically inside their respective grid areas.
+               center places each item in the vertical center of its grid area.
+               Other values include start, end and stretch. */
+            align-items: center;
+
+            /* Creates 4 columns, each 80px wide.
+               repeat(4, 80px) is a shorter way to define repeated columns. */
+            /* grid-template-columns:repeat(4, 80px);*/
+
+            /* Creates 2 rows, each 88px high. */
+            /*grid-template-rows: repeat(2, 88px); */
+
+            /* Aligns the complete grid structure inside the container.
+               It does not align individual items inside their grid areas.
+               justify-content works along the horizontal axis.
+               align-content works along the vertical axis.
+               Extra space must be available for alignment to be noticeable. */
+            /* justify-content: center;
+            align-content: center;  */
+
+            /* Shorthand for justify-content and align-content.
+               First value controls horizontal alignment.
+               Second value controls vertical alignment. */
+            /* place-content: center; */
+
+        }
+
+
+        .item {
+            /* Sets the size of each grid item.
+               The item can be smaller than its grid area.
+               Alignment properties control where it appears inside that area. */
+            border: 2px solid red;
+            height: 35px;
+            width: 35px;
+        }
+
+
+        /* Controls the alignment of only item-2.
+           justify-self controls horizontal alignment.
+           align-self controls vertical alignment.
+           These properties override the corresponding container alignment
+           for this particular item. */
+        /* .item-2 {
+            justify-self: end;
+            align-self: self-start;
+        } */
+
+
+        /* Places item-1 between grid row lines 1 and 2
+           and column lines 1 and 2.
+           Grid line numbers identify the boundaries of grid cells. */
+        /* .item-1 {
+            grid-row: 1/2;
+            grid-column: 1/2;
+        } */
+
+
+        /* Controls the exact grid area occupied by item-4. */
+        /* .item-4 {
+            [Places the item between row lines 1 and 2.]
+            grid-row: 1/2;
+
+            [Uses named grid lines instead of line numbers.
+            Places the item between the lines named pehla and doosra.]
+            grid-row: pehla/doosra;
+
+            [Separate properties for defining row boundaries.
+            grid-row-start defines the starting line.
+            grid-row-end defines the ending line.]
+            grid-row-start: 1;
+            grid-row-end: 2;
+
+            grid-column: 1/2;
+            grid-column: first/second;
+        } */
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+        <div class="item item-3">3</div>
+        <div class="item item-4">4</div>
+        <div class="item item-5">5</div>
+    </div>
+</body>
+
+</html>

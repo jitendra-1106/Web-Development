@@ -1,0 +1,78 @@
+# CSS Layout – Grid Notes
+
+## 1. Layout Techniques
+
+| Technique | Purpose |
+|---|---|
+| Normal Flow | Arranges elements in the default document flow |
+| Float | Moves an element left or right, allowing content to wrap around it |
+| Positioning | Places elements at specific positions |
+| Flexbox | One-dimensional layout (row or column) |
+| CSS Grid | Two-dimensional layout (rows and columns) |
+
+## 2. CSS Grid
+
+### Basic Concepts
+- **Grid Container:** Element with `display: grid`.
+- **Grid Items:** Direct children of the grid container.
+- **Grid Lines:** Lines that divide rows and columns.
+- **Grid Tracks:** Space between two grid lines (row or column).
+- **Grid Cell:** Intersection of one row and one column.
+- **Grid Area:** One or more combined grid cells.
+
+### Grid Sizing
+- `grid-template-columns`: Defines column sizes.
+- `grid-template-rows`: Defines row sizes.
+- `fr`: Divides available space into fractions.
+- `repeat()`: Repeats track definitions.
+- `minmax()`: Sets minimum and maximum track sizes.
+- `gap`: Sets spacing between rows and columns.
+
+### Grid Alignment
+
+| Property | Purpose |
+|---|---|
+| `justify-items` | Aligns all items horizontally within their cells |
+| `align-items` | Aligns all items vertically within their cells |
+| `justify-content` | Aligns the entire grid horizontally within the container |
+| `align-content` | Aligns the entire grid vertically within the container |
+| `justify-self` | Aligns one item horizontally within its cell |
+| `align-self` | Aligns one item vertically within its cell |
+
+**Remember:**
+- `items` = All items
+- `content` = Entire grid tracks
+- `self` = Individual item
+
+**Shorthand:**
+- `place-items` = `align-items` + `justify-items`
+- `place-content` = `align-content` + `justify-content`
+- `place-self` = `align-self` + `justify-self`
+
+*Note: Alignment becomes noticeable when extra space is available.*
+
+### Grid Line Numbers
+- Grid lines are numbered, not grid items.
+- Positive numbering starts from the beginning: `1, 2, 3, 4`.
+- Negative numbering starts from the end: `-4, -3, -2, -1`.
+- `4` and `-1` represent the same ending line in a three-column explicit grid.
+- `grid-column` and `grid-row` define an item's starting and ending lines.
+- `span` specifies how many tracks an item occupies.
+
+### Grid Template Areas
+- `grid-template-areas` is one method of defining a grid layout using named areas.
+- Each quoted string represents one row.
+- Repeating the same name combines cells into one area.
+- `.` represents an empty cell.
+- Every row must contain the same number of cells.
+- A named area must form a rectangle.
+- `grid-area` assigns an item to a named area.
+
+**Other placement method:** Items can also be positioned using grid lines with `grid-row` and `grid-column`.
+
+### Explicit and Implicit Grid
+- **Explicit Grid:** Tracks defined using `grid-template-rows` and `grid-template-columns`.
+- **Implicit Grid:** Extra tracks automatically created by the browser when needed.
+- `grid-auto-rows`: Sets the size of implicit rows.
+- `grid-auto-columns`: Sets the size of implicit columns.
+- `grid-auto-flow`: Controls automatic item placement (row or column).

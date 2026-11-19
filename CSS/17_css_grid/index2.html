@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid 2</title>
+    <style>
+
+        /* Defines the layout using named grid areas.
+            Each string represents one row.
+            Each name represents a grid area.
+            Repeated names create an area that spans multiple cells.
+
+            Layout:
+            nav     nav      nav
+            side    article  article
+            footer  footer   footer */
+        .container {
+            border: 2px solid black;
+            display: grid;
+            grid-template-areas:"nav nav nav"
+                                "side article article"
+                                "footer footer footer";
+            
+        }
+
+        /* Places item-1 in the area named nav.
+           The nav area spans all 3 columns. */
+        .item {
+            border: 2px solid red;
+            height: 35px;
+        }
+
+        /* Places item-1 in the area named nav.
+           The nav area spans all 3 columns. */
+        .item-1 {
+            grid-area: nav;
+            background-color: aqua;
+        }
+
+        /* Places item-2 in the area named side. */
+        .item-2 {
+           grid-area: side;
+           background-color: orange;
+        }
+
+        /* Places item-3 in the area named article.
+           The article area spans 2 columns. */
+        .item-3 {
+            grid-area: article; 
+            background-color: gray; 
+        }
+
+        /* Places item-4 in the area named footer.
+           The footer area spans all 3 columns. */
+        .item-4 {
+            grid-area: footer;
+            background-color: yellow;
+        }
+
+        /* Two different items cannot occupy the same named area
+           in this type of layout without overlapping each other.
+           If both use nav, they will occupy the same grid area. */
+        /* .item-5 {
+            grid-area: nav;
+        } */
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+        <div class="item item-3">3</div>
+        <div class="item item-4">4</div>
+        <div class="item item-5">5</div>
+    </div>
+</body>
+
+</html>
