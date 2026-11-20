@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition Property</title>
+
+    <style>
+        .container{
+            background-color: orange;
+            border: 1px solid black;
+            height: 80vh;
+            width: 80vw;
+        }
+        .box{
+            background-color: #50f106;
+            border: 1px dotted black;
+            height: 6vh;
+            width: 9vw;
+
+            /* Individual transition properties */
+
+            /* Defines which CSS properties should animate when their values change.
+            Multiple properties can be specified using commas.
+            'all' applies transition to all properties that support transitions. */
+            transition-property:transform, background-color;
+
+            /* Defines how long the transition animation takes to complete.
+            Here, the animation takes 4 seconds. */
+            transition-duration: 4s;
+
+            /* Controls the speed pattern of the transition during its duration.
+            cubic-bezier() allows us to create a custom acceleration and deceleration curve. */
+            transition-timing-function: cubic-bezier(0.22, 0.43, 0, 0.99);
+
+            /* Defines how long the browser waits before starting the transition.
+            Here, the transition starts after 1 second. */
+            transition-delay: 1s;
+            
+
+            /* Transition shorthand property */
+
+            /* Combines transition-property, transition-duration,
+            transition-timing-function and transition-delay into one declaration.
+            Syntax:
+            transition: property duration timing-function delay;
+            This shorthand overrides the individual transition declarations above
+            because it is written later in the CSS rule. */
+            /* transition: all 3s cubic-bezier(0.09, 0.5, 0, 0.99) 1s; */
+
+        }
+
+       
+        .translate{
+            /* Moves the element 10vw horizontally and 10vh vertically.
+            scale(2) doubles the element's visual size. */
+            transform: translateX(10vw) translateY(10vh) scale(2);
+
+            /* Changes the background color from light green to dark green.
+            This color change is also animated because transition-property is all. */
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box translate"></div>
+    </div>
+</body>
+
+</html>
