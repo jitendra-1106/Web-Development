@@ -1,0 +1,95 @@
+[https://www.figma.com/]
+[https://www.figma.com/community]
+
+# Figma – Basic Notes
+
+## 1. What is Figma?
+Figma is a web-based UI/UX design tool used to create website layouts, app interfaces, prototypes and design systems.
+
+## 2. Why do we use Figma?
+- **UI Design:** Create the visual layout of websites and applications.
+- **Design Reference:** Understand how a website should look before writing HTML and CSS.
+- **Prototyping:** Create clickable designs to understand user interactions and navigation.
+- **Collaboration:** Multiple people can work on the same design.
+- **Developer Handoff:** Inspect design properties such as colors, fonts, spacing, dimensions and assets.
+
+## 3. Figma Community
+
+Figma Community is a platform where designers share free and paid design resources.
+
+We can use Community resources instead of creating everything from scratch.
+
+### How to use Figma Community?
+1. Open Figma Community.
+2. Search for the resource you need.
+3. Open a design or resource.
+4. Click **Open in Figma** or **Duplicate** (depending on the resource).
+5. The resource will be available in your Figma workspace.
+6. Explore and use the required elements.
+
+### What can we get from Community?
+
+**1. Website Design References**
+- Landing page designs
+- Portfolio designs
+- Dashboard layouts
+- Login and signup pages
+- E-commerce website designs
+
+**Purpose:** Understand layouts, color combinations, typography, spacing and overall UI structure.
+
+**2. Icons**
+- Search for icon packs.
+- Copy or export the required icons.
+- Use SVG icons in HTML/CSS projects.
+
+**Purpose:** Get ready-made icons without designing each icon manually.
+
+**3. Images and Illustrations**
+- Search for illustrations, image packs and UI graphics.
+- Export the required assets when permitted by their license.
+- Use them in website projects.
+
+**Purpose:** Find visual assets for hero sections, backgrounds, cards and other UI elements.
+
+**4. UI Kits and Components**
+- Buttons
+- Forms
+- Navigation bars
+- Cards
+- Modals
+- Input fields
+
+**Purpose:** Explore reusable UI components and understand how common interface elements are designed.
+
+**5. Templates**
+- Portfolio templates
+- Website templates
+- Mobile app templates
+- Dashboard templates
+
+**Purpose:** Use existing designs as a starting point instead of designing everything from zero.
+
+## 4. How to use Figma as a Web Developer?
+
+1. Find a website design in Figma Community.
+2. Duplicate the design into your workspace.
+3. Study its layout, colors, typography and spacing.
+4. Inspect the dimensions and CSS-related properties.
+5. Export required assets such as images and SVG icons.
+6. Recreate the design using HTML, CSS and JavaScript.
+
+## 5. Important Terms
+
+- **Frame:** A container used to create screens or design sections.
+- **Layers:** Individual elements that make up a design.
+- **Components:** Reusable design elements.
+- **Auto Layout:** Automatically arranges and spaces elements inside a frame.
+- **Prototype:** Connects screens to demonstrate interactions and navigation.
+- **Inspect / Dev Mode:** Helps developers examine design properties and implementation details.
+
+## 6. Important Note
+
+Figma is mainly a design and prototyping tool, not a replacement for HTML, CSS or JavaScript.
+
+Use Community resources as references and learning material. Always check the resource license before using assets in public or commercial projects.
