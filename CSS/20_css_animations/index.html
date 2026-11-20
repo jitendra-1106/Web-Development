@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+        .container{
+            background-color: rgb(9, 106, 106);
+            height: 80vh;
+            width: 30vw;
+        }
+
+        .box{
+            width: 34px;
+            height: 45px; 
+
+            /* Individual animation properties */
+
+            /* Defines the name of the @keyframes animation to apply. */
+            animation-name: JkKaAnimation; 
+
+            /* Defines how long one complete animation cycle takes. */
+            animation-duration: 1s;
+
+            /* Defines how many times the animation should repeat.
+               'infinite' makes the animation run continuously. */
+            animation-iteration-count: infinite;
+
+            /* Controls the speed pattern of the animation.
+               Examples: ease, ease-in, ease-out, ease-in-out, linear. */
+            animation-timing-function: cubic-bezier(0, 0, 0, 0.96);
+
+            /* Defines the waiting time before the animation starts. */
+            animation-delay: 1s;
+
+            /* Defines the direction in which keyframes are played.
+               normal: Forward
+               reverse: Backward
+               alternate: Forward, then backward
+               alternate-reverse: Backward, then forward */
+            animation-direction: reverse;
+
+            /* Controls whether the animation is running or paused.
+               It does not reset the animation; it pauses at the current position. */
+            /* animation-play-state: paused;  */
+
+
+            /* Animation shorthand */
+
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            /* animation: JkKaAnimation 2s ease-in-out  1;  */
+            
+            /* Animation Fill Mode */
+            /* 'forwards' keeps the element in the final keyframe state
+               after the animation finishes. */
+            /* animation: JkKaAnimation 2s ease-in-out  1 forwards;  */
+
+            /* 'backwards' applies the first relevant keyframe state
+               during the delay period before the animation starts. */
+            /* animation: JkKaAnimation 2s ease-in-out  1 backwards;  */
+            
+            /* Multiple animations can run on the same element.
+               Separate each animation with a comma.
+               Each animation has its own name, duration, delay and other settings. */
+            /* animation: JkKaAnimation 2s ease-in-out 3s 1, 
+                       JK2 3s ease-in-out 3s 1; */
+
+        }
+        
+        /* @keyframes defines the intermediate and final states of an animation.
+           The browser automatically animates between these defined states. */
+        @keyframes JkKaAnimation {
+            from{
+                background-color: red;
+            }
+            to{
+                background-color: yellow; 
+            }
+        }
+
+        /* Percentage-based keyframes give more control over animation stages.
+           0% represents the beginning and 100% represents the ending state.
+           Intermediate percentages define what happens between them. */
+        @keyframes Jk2 {
+            0%{
+                transform: rotate(100deg);
+            }
+            20%{
+                transform: rotate(200deg);
+            }
+            50%{
+                transform: rotate(220deg);
+            }
+            80%{
+                transform: rotate(300deg);
+            }
+            100%{
+                transform: rotate(310deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            Box
+        </div>
+    </div>
+</body>
+</html>
