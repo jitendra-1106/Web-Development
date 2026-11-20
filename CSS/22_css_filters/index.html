@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Filters</title>
+    <style> 
+        /* CSS Filters:
+           Apply visual effects to images or other elements.
+        */
+        /* blur():
+        Controls the amount of blur.
+        */
+
+        /* brightness():
+        Controls the brightness level.
+        */
+
+        /* contrast():
+        Controls the difference between light and dark areas.
+        */
+
+        /* opacity():
+        Controls the transparency level.
+        0 = Fully transparent, 1 = Fully visible.
+        */
+
+        /* hue-rotate():
+        Rotates the hue of colors by a given angle.
+        Example: 90deg, 180deg, 360deg.
+        */
+
+        /* saturate():
+        Controls the intensity of colors.
+        */
+
+        /* sepia():
+        Applies a warm, brownish sepia tone.
+        */
+
+        /* invert():
+        Inverts the colors of the element.
+        */
+
+        /* grayscale():
+        Converts colors into shades of gray.
+        */
+
+        /* drop-shadow():
+        Adds a shadow following the shape of the element.
+        Syntax: drop-shadow(offset-x offset-y blur-radius color).
+        */
+
+
+        /* img{
+            filter: blur(10px);
+        } */
+
+        .img1{
+            filter: brightness(122%);
+            /* filter: contrast(6); */
+            filter: contrast(200%);
+            filter: opacity(1);
+            filter: hue-rotate(0);
+            filter: saturate(150%);
+
+            /* shorthand: */
+            /* filter: brightness() contrast() opacity() sepia(); */
+        }
+        
+        .img2{
+            filter: sepia(3);
+            filter: invert(1);
+
+        }
+
+        .img3{
+            filter: grayscale(20%);
+            filter: drop-shadow(6px 6px 5px black);
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container"> 
+        <img class="img1" src="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg?size=626&ext=jpg" alt="">
+        <img class="img2" src="https://c.ndtvimg.com/2023-09/154fgjlg_shah-rukh-khan-_625x300_23_September_23.jpg" alt="">
+        <img class="img3" src="https://images.hindustantimes.com/img/2022/11/12/550x309/akshay_kumar_1659860706633_1668255913307_1668255913307.jpg" alt="">
+    </div>
+</body>
+</html>
