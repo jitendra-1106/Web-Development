@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise - 2</title>
+
+    <style>
+        body{
+            background-color: #bdeb3f;
+            /* padding: 40px; */
+        }
+        .card{
+            margin: 40px;
+            border-radius: 10px;
+            height: 410px;
+            width: 270px;
+            background-color: beige;
+        }
+
+        /* Image wrapper */
+        .image{
+            padding: 9px 20px ;
+            /* Space between image and wrapper */
+
+            /* Alternative:
+            padding: 0;
+            .image img {
+                margin: 9px 20px;
+            }
+            Space outside the image instead.
+            */
+        }
+        .image img{
+            border-radius: 8px;
+            /* Make image corners round */
+        }
+
+        /* Tags wrapper */
+        .comp{
+            padding: 0 18px;
+            /* Space inside the tags wrapper */
+
+            /* Alternative:
+            padding: 0;
+            margin: 0 18px;
+            Move the wrapper from left and right.
+            */
+        }
+
+        /* Individual tags */
+        .comp span{
+            border: 1px solid gray;
+            border-radius: 9px;
+            padding: 0 7px;
+            /* Space inside each tag */
+
+            /* margin-right: 8px;
+            Space between tags, not inside them.
+            Not an exact replacement.
+            */
+            font-size: 15px;
+        }
+
+        /* Content wrapper */
+        .content{
+            margin-top: 1px;
+            /* Space outside the content wrapper */
+            /* Alternative:
+            margin-top: 0;
+            .comp {
+                margin-bottom: 1px;
+            }
+            Create the same gap from the previous wrapper.
+            */
+        }
+
+        /* Heading */
+        .content h2{
+            color: black;
+            font-size: 21px;
+            padding: 0 15px;
+            /* Space inside the heading */
+
+             /* Alternative:
+            padding: 0;
+            margin-left: 15px;
+            margin-right: 15px;
+            Move heading away from left and right edges.
+            */
+        }
+
+        /* Paragraph */
+        .content p{
+            color: rgb(61, 61, 61);
+            padding: 0 15px;
+            /* Space inside the paragraph */
+
+            /* Alternative:
+            padding: 0;
+            margin-left: 15px;
+            margin-right: 15px;
+            Move paragraph away from left and right edges.
+            */
+
+            /* line-height: 1.5;
+            Increase space between text lines.
+            */
+        }
+
+        /* Button wrapper */
+        .button{
+            text-align: center;
+            /* Center the button */
+
+            /* Alternative:
+            display: flex;
+            justify-content: center;
+            Center the button using Flexbox.
+            */
+        }
+        
+        /* Button */
+        .button button{
+            background-color: #65d9f7;
+            border: none;
+            border-radius: 7px;
+            font-size: 15px;
+
+             /* padding: 8px 20px;
+            Increase button size using internal spacing.
+            */
+
+            /* margin: 10px;
+            Space outside the button.
+            Not a replacement for padding.
+            */
+        }
+
+        button:hover{
+            background-color: rebeccapurple;
+            /* Change button background on hover */
+            color: yellow;
+            /* Change button text color on hover */
+            cursor: pointer;
+            /* Show hand cursor on hover */
+        }
+
+    </style>
+</head>
+
+<body>
+        <div class="card">
+            <div class="image">
+                <img width="230px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFx5ZbtTBKCeUhp27rVWaiFW91y9i26Y9snzNrz1wGJ3JOjsq09a5AbrU&s=10" alt="">
+            </div>
+            <div class="comp">
+                <span>Nature</span>
+                <span>Lake</span>
+            </div>
+            <div class="content">
+                <h2>Jitendra kumar</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, eum? Sed nobis, perferendis non, commodi consectetur culpa temporibus placeat, eveniet eaque maiores ipsam.</p>
+            </div>
+            <div class="button">
+                <button>Read More</button>
+            </div>
+        </div>
+</body>
+
+</html>
