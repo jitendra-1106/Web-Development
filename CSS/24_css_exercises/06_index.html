@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise - 6</title>
+
+    <style>
+
+        body {
+            font-family: 'Inter', Helvetica, Arial, Lucida, sans-serif;
+        }
+
+        /* HEADER CSS */
+
+        header {
+            border: 1px solid lightgray;
+            border-radius: 5px;
+            background-color: #F2F0EC;
+            position: sticky;
+            top: 0;
+        }
+
+        .logo img {
+            width: 130px;
+            padding-left: 17px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            font-family: "Segoe UI";
+        }
+
+        .right ul {
+            display: flex;
+            gap: 12px;
+        }
+
+        .right ul li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .right ul li span {
+            padding: 0 5px;
+        }
+
+        .nav {
+            gap: 8px;
+            padding-left: 215px;
+        }
+
+        .nav2 {
+            margin-left: 182px;
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+            background-color: #ffd741;
+            color: #2e2e2e;
+            font-weight: 300;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .lang {
+            font-weight: 500;
+            color: #222222;
+            font-size: 15px;
+        }
+
+        .link1 {
+            color: #222222;
+        }
+
+        .link2 {
+            color: rgba(128, 128, 128, 0.596);
+        }
+
+        .link3 {
+            color: #04e8f8;
+        }
+
+        /* MAIN SECTION CSS */
+
+        section {
+            margin-top: 120px;
+            text-align: center;
+        }
+
+        section h1 {
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 1.1em;
+            color: #222222;
+        }
+
+        .top {
+            display: grid;
+            grid-template-areas: "windows Mac Linux";
+            gap: 3vw;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .windows {
+            grid-area: windows;
+            border: none;
+            border-radius: 10px;
+            background-color: #F2F0EC;
+            color: black;
+            text-align: center;
+            width: 30vw;
+        }
+
+        .t1 {
+            display: flex;
+            gap: 10px;
+            font-size: 23px;
+            padding-top: 0px;
+            padding-left: 95px;
+            padding-bottom: 0px;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            padding-top: 0px;
+            color: rgba(128, 128, 128, 0.596);
+        }
+
+        .windows2 {
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            background-color: #ffd741;
+            color: #2e2e2e;
+            font-weight: 500;
+            padding: 10px 24px;
+            cursor: pointer;
+        }
+
+        .Mac {
+            grid-area: Mac;
+            border-radius: 10px;
+            border: none;
+            background-color: #F2F0EC;
+            color: black;
+            text-align: center;
+            width: 30vw;
+        }
+
+        .t2 {
+            display: flex;
+            gap: 10px;
+            font-size: 23px;
+            padding-top: 0px;
+            padding-left: 95px;
+            padding-bottom: 0px;
+        }
+
+        ul .apple {
+            list-style: none;
+            display: flex;
+            padding-top: 0px;
+            color: rgba(128, 128, 128, 0.596);
+        }
+
+        .apple2 {
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            background-color: #ffd741;
+            color: #2e2e2e;
+            font-weight: 500;
+            padding: 10px 24px;
+            cursor: pointer;
+        }
+
+        .Linux {
+            grid-area: Linux;
+            border: none;
+            border-radius: 10px;
+            background-color: #F2F0EC;
+            color: black;
+            text-align: center;
+            width: 30vw;
+        }
+
+        .t3 {
+            display: flex;
+            gap: 10px;
+            font-size: 23px;
+            padding-top: 0px;
+            padding-left: 95px;
+            padding-bottom: 0px;
+        }
+
+        ul .linux {
+            list-style: none;
+            display: flex;
+            padding-top: 0px;
+            color: rgba(97, 96, 96, 0.596);
+        }
+
+        .linux2 {
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            background-color: #ffd741;
+            color: #2e2e2e;
+            font-weight: 500;
+            padding: 10px 24px;
+            cursor: pointer;
+        }
+
+        .para1 {
+            line-height: 1.4em;
+            font-weight: 300;
+            font-size: 18px;
+        }
+
+        .para2 {
+            font-size: 10px;
+            font-weight: 30;
+            color: rgb(80, 79, 79);
+        }
+
+        .down {
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 25px;
+            font-weight: 500;
+            font-size: 17px;
+        }
+
+
+        /* FOOTER CSS */
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.87);
+            color: rgba(255, 255, 255, 0.966);
+            font-weight: 100;
+            border-radius: 8px;
+            font-family: 'Inter', Helvetica, Arial, Lucida, sans-serif;
+            padding-bottom: 15px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            align-content: center;
+            justify-content: center;
+        }
+
+        /* Footer list override */
+        footer ul {
+            list-style: none;
+            display: block;
+            padding-top: 0px;
+        }
+
+        .footer ul h3 {
+            cursor: pointer;
+            color: white;
+        }
+
+        .footer ul li {
+            cursor: pointer;
+            color: rgb(199, 197, 197);
+        }
+
+        .footer5 {
+            padding-top: 5px;
+        }
+
+        .footer2 {
+            font-size: 15px;
+            padding-bottom: 48px;
+        }
+
+        .footer3 {
+            font-size: 15px;
+        }
+
+        .footer4 {
+            color: rgb(199, 197, 197);
+            font-size: 13px;
+        }
+
+        #e {
+            padding: 10px;
+            background: rgba(128, 128, 128, 0.651);
+        }
+
+        .subs {
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+            background-color: #ffd741;
+            color: #2e2e2e;
+            font-weight: 500;
+            padding: 10px 24px;
+            cursor: pointer;
+        }
+
+        .copyw {
+            text-align: end;
+            color: rgb(199, 197, 197);
+            padding-right: 13px;
+        }
+
+        
+
+    @media screen and (max-width: 800px) {
+
+    /* Navbar */
+    nav {
+        flex-direction: column;
+    }
+
+    .right ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .nav {
+        padding-left: 0;
+    }
+
+    .nav2 {
+        margin-left: 0;
+    }
+
+    /* Main Section */
+    section {
+        margin-top: 50px;
+        padding: 0 10px;
+    }
+
+    section h1 {
+        font-size: 32px;
+    }
+
+    .para1 {
+        font-size: 16px;
+    }
+
+    /* Download Cards */
+    .top {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "windows"
+            "Mac"
+            "Linux";
+    }
+
+    /* Card Headings */
+    .t1,
+    .t2,
+    .t3 {
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    /* Card Lists */
+    .windows1,
+    .apple,
+    .linux {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Footer */
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer.columns {
+        flex-wrap: wrap;
+    }
+
+    .copyw {
+        text-align: center;
+    }
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- https://www.ultraedit.com/downloads/ultraedit-download-thank-you/ -->
+    <!-- HEADER -->
+
+    <header>
+        <nav>
+
+            <div class="logo">
+                <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE_primary_logo.png" alt="">
+            </div>
+
+            <div class="right">
+                <ul class="nav">
+
+                    <li>
+                        <a class="link1" href="/"><span>Products </span></a>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+
+                    <li><a class="link1" href="/"><span>Buy </span></a></li>
+
+                    <li><a class="link1" href="/"><span>Renew </span></a></li>
+
+                    <li>
+                        <a class="link1" href="/"><span>Support </span></a>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+
+                    <li>
+                        <a class="link1" href="/"><span>Learn </span></a>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+
+                    <li>
+                        <a class="link1" href="/"><span>Company </span></a>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+
+                    <li>
+                        <button class="nav2"><span>Download</span></button>
+                    </li>
+
+                    <li>
+                        <img width="20px" src="https://www.svgrepo.com/show/522410/globe.svg" alt="">
+                        <span class="lang">English</span>
+                    </li>
+
+                    <li>
+                        <img width="20px" src="https://img.icons8.com/?size=80&id=QLHLOlC7W2BG&format=png" alt="">
+                    </li>
+
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main>
+
+        <section>
+            <h1>Download UltraEdit</h1>
+
+            <p class="para1">
+                Choose your operating system and download the latest version of the editor.
+                <br>
+                New users get a free 7-day trial after downloading UltraEdit.
+            </p>
+        </section>
+
+
+        <div class="top">
+
+            <!-- WINDOWS -->
+
+            <div class="windows">
+
+                <div class="t1">
+                    <img class="w1" width="26px"
+                        src="https://www.ultraedit.com/wp-content/uploads/2023/01/Windows_logo_-_2021_Black.svg" alt="">
+                    <h3 class="w">windows</h3>
+                    <img width="22px" src="https://www.ultraedit.com/wp-content/uploads/2023/01/language-1.svg" alt=""
+                        class="w2">
+                </div>
+
+                <ul class="windows1">
+                    <li>v2026.1 (released 2026-10-29) |</li>
+                    <li><a class="link2" href="/">Latest changes </a></li>
+                </ul>
+
+                <button class="windows2">Download</button>
+
+                <p class="para2">
+                    SHA256
+                    <br>
+                    DCE0F9C9354F3527AFF765C25E0518FC08EC8D1D545B58B461BDEED8A368B4CD
+                </p>
+
+            </div>
+
+
+            <!-- MAC -->
+
+            <div class="Mac">
+
+                <div class="t2">
+                    <img class="a1" width="35px" src="https://www.svgrepo.com/show/303110/apple-black-logo.svg" alt="">
+                    <h3 class="a">macOS</h3>
+                    <img width="20px" src="https://www.ultraedit.com/wp-content/uploads/2023/01/language-1.svg" alt=""
+                        class="a2">
+                </div>
+
+                <ul class="apple">
+                    <li>v2025.0 (released 2026-10-29) | </li>
+                    <li><a class="link2" href="/">Latest changes </a></li>
+                </ul>
+
+                <button class="apple2">Download</button>
+
+            </div>
+
+
+            <!-- LINUX -->
+
+            <div class="Linux">
+
+                <div class="t3">
+                    <img class="l1" width="30px" src="https://www.svgrepo.com/show/473700/linux.svg" alt="">
+                    <h3 class="l">Linux</h3>
+                    <img width="20px" src="https://www.ultraedit.com/wp-content/uploads/2023/01/language-1.svg" alt=""
+                        class="l2">
+                </div>
+
+                <ul class="linux">
+                    <li>v2025.0 (released 2026-08-20) |</li>
+                    <li><a class="link2" href="/">Latest changes </a></li>
+                </ul>
+
+                <button class="linux2">Download</button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- BUY NOW -->
+
+    <div>
+        <p class="down">
+            Ready to purchase UltraEdit?
+            <span><a class="link3" href="/">Buy now</a></span>
+        </p>
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer">
+
+            <!-- NEWSLETTER SECTION -->
+
+            <div class="footer5">
+
+                <img class="footer0" src="https://www.ultraedit.com/wp-content/uploads/2023/01/Background-2-1.svg"
+                    alt="">
+
+                <h3 class="footer1">UltraEdit</h3>
+
+                <p class="footer2">
+                    UltraEdit is the powerful text editor built for <br>
+                    developers, data wranglers, and IT pros handling <br>
+                    large files and complex tasks.
+                </p>
+
+                <h4 class="footer3">Newsletter Signup</h4>
+
+                <p class="footer4">
+                    Stay updated on new features, tutorials, and exclusive offers.
+                </p>
+
+                <form action="post" class="f">
+                    <input type="text" id="e" name="email" placeholder="email@email.com">
+                    <button type="submit" class="subs">Subscribe</button>
+                </form>
+
+            </div>
+
+
+            <!-- FOOTER COLUMNS -->
+
+            <div class="footer columns">
+
+                <div class="fc1">
+                    <ul class="fc1">
+                        <h3 class="fc1">Company</h3>
+                        <li class="fc1">About Us</li>
+                        <li class="fc1">Contact us</li>
+                    </ul>
+                </div>
+
+
+                <div class="fc2">
+                    <ul class="fc2">
+                        <h3 class="fc2">Products</h3>
+                        <li class="fc2">UltraEdit (Windows / Mac / Linux)</li>
+                        <li class="fc2">UltraCompare</li>
+                        <li class="fc2">UEStudio</li>
+                        <li class="fc2">UltraFinder</li>
+                        <li class="fc2">UltraFTP</li>
+                        <li class="fc2">All Products</li>
+                    </ul>
+                </div>
+
+
+                <div class="fc3">
+                    <ul class="fc3">
+                        <h3 class="fc3">Support</h3>
+                        <li class="fc3">Help Center</li>
+                        <li class="fc3">Licensing & Activation</li>
+                        <li class="fc3">File a Support Ticket</li>
+                        <li class="fc3">Documentation</li>
+                        <li class="fc3">Community Forums</li>
+                    </ul>
+                </div>
+
+
+                <div class="fc4">
+                    <ul class="fc4">
+                        <h3 class="fc4">Legal</h3>
+                        <li class="fc4">Privacy Policy</li>
+                        <li class="fc4">Refund Policy</li>
+                        <li class="fc4">License Agreement</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+
+        <p class="copyw">© Copyright 2026, All Rights Reserved</p>
+
+    </footer>
+
+</body>
+
+</html>
+
+
+<!--
+    Download Functionality:
+    - If we download the original software on our laptop and store it in our project folder,
+      we can give its relative path in the anchor tag of the download button.
+    - When users click the button, the browser requests that file from our local server
+      and downloads it to their computer.
+    - Our laptop works like a server by providing the stored file.
+
+    Limitations:
+    - This works only when the file is available at the given path.
+    - Other users cannot access the file if it is stored only on our laptop.
+    - For a live website, we must upload the file to an online server.
+    - Large software files can increase project size, so official download links are
+      a better option.
+-->
