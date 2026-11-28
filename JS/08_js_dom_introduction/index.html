@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Document Object Model(DOM)</title>
+    
+</head>
+<body>
+    <div>
+        I am a box.
+    </div>
+    <script>
+        // DOM (Document Object Model)
+        // It allows JavaScript to access and manipulate HTML elements.
+
+
+        // Changing the title of the current HTML document using the DOM
+        document.title = "Jitendra kumar"
+
+        // Displaying the updated document title in the console
+        console.log(document.title)
+
+        // Accessing and displaying the complete body element of the HTML document
+        console.log(document.body)
+
+        // Changing the background color of the body using JavaScript
+        document.body.style.backgroundColor = "orange"
+
+        // BOM (Browser Object Model)
+        // It allows JavaScript to interact with the browser window and its features.
+
+        // Accessing the browser window
+        console.log(window)
+
+        // Getting the current website URL
+        console.log(window.location.href)
+
+        // Displaying an alert message
+        window.alert("Welcome to my website")
+        // alert("Welcome to my website") //same as above
+    </script>
+</body>
+</html>
+
+<!-- 
+// DOM (Document Object Model):
+// It allows JavaScript to access and manipulate HTML elements and their content, attributes, and styles.
+
+// BOM (Browser Object Model):
+// It allows JavaScript to interact with the browser window and its features.
+
+// window:
+// It is the global object of the browser and provides access to browser-related objects and methods.
+// The window keyword is optional when accessing its global properties and methods.
+
+// document:
+// It represents the current HTML document and is a part of the window object.
+-->
